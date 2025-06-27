@@ -8,7 +8,8 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Coursework.Enums;
+using Coursework.Models;
+using static Coursework.Utils.Enums;
 using static Coursework.RoomCard;
 
 namespace Coursework

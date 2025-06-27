@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
-using static Coursework.Enums;
+using static Coursework.Utils.Enums;
 
-namespace Coursework
+namespace Coursework.Models
 {
 
     public class Room

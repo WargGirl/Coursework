@@ -8,7 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Coursework.Enums;
+using Coursework.Models;
+using Coursework.Utils;
+using static Coursework.Utils.Enums;
 
 namespace Coursework
 {
@@ -84,24 +86,6 @@ namespace Coursework
             dtpWorkStartTime.Enabled = enable;
             dtpWorkEndTime.Enabled = enable;
             btnChoosePhoto.Enabled = enable;
-        }
-
-
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show(
-                $"Are you sure you want to delete staff member '{staff.Name} {staff.Surname}'?",
-                "Confirm Deletion",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning
-            );
-
-            if (result == DialogResult.Yes)
-            {
-                mainPageInstance?.DeleteStaff(this.staff);
-                this.Close();
-            }
         }
 
         private Staff CloneStaff(Staff s)
@@ -220,6 +204,22 @@ namespace Coursework
                     MessageBox.Show($"Error loading image: {ex.Message}", "Image Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     staff.Photo = null;
                 }
+            }
+        }
+
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                $"Are you sure you want to delete staff member '{staff.Name} {staff.Surname}'?",
+                "Confirm Deletion",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                mainPageInstance?.DeleteStaff(this.staff);
+                this.Close();
             }
         }
     }

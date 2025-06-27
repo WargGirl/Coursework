@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
-using static Coursework.Enums;
+using static Coursework.Utils.Enums;
 
-namespace Coursework
+namespace Coursework.Models
 {
-    
+
     public class Staff
     {
         public string StaffId { get; set; } = Guid.NewGuid().ToString();
         public string Name { get; set; }
         public string Surname { get; set; }
-        public Enums.StaffProfession Profession { get; set; }
-        public Enums.StaffEmploymentStatus EmploymentStatus { get; set; }
+        public StaffProfession Profession { get; set; }
+        public StaffEmploymentStatus EmploymentStatus { get; set; }
         public decimal Salary { get; set; }
         public string Photo { get; set; }
         public string Phone { get; set; }
@@ -55,7 +55,7 @@ namespace Coursework
                 }
                 else
                 {
-                    return (currentTime >= WorkStartTime || currentTime < WorkEndTime);
+                    return currentTime >= WorkStartTime || currentTime < WorkEndTime;
                 }
             }
         }

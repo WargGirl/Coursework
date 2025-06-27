@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Coursework.Enums;
+using Coursework.Models;
+using static Coursework.Utils.Enums;
 
 namespace Coursework
 {

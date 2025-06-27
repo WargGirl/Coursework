@@ -8,7 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Coursework.Enums;
+using Coursework.Models;
+using Coursework.Utils;
+using static Coursework.Utils.Enums;
 
 namespace Coursework
 {

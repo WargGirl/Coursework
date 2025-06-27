@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualBasic;
+﻿using Coursework.Models;
+using Coursework.Utils;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Coursework.Enums;
+using static Coursework.Utils.Enums;
 
 namespace Coursework
 {
@@ -140,7 +142,7 @@ namespace Coursework
             txtRoomNumber.Text = guest.RoomNumber;
             txtPhoneNumber.Text = guest.Phone;
             dtpBirthDate.Value = guest.DateOfBirth;
-            cmbGender.SelectedItem = guest.GuestGender.ToString();
+            cmbGender.SelectedItem = guest.GuestGender;
             chkVIP.Checked = guest.IsVIP;
             txtInHotelStatus.Text = guest.InHotelStatus.ToString();
             txtAdditionalInfo.Text = guest.AdditionalInfo;

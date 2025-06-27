@@ -12,11 +12,6 @@ namespace Coursework
         {
             ApplicationConfiguration.Initialize();
             Application.Run(new MainPage());
-            //LoginPage loginForm = new LoginPage();
-            //if (loginForm.ShowDialog() == DialogResult.OK)
-            //{
-            //    Application.Run(new MainPage());
-            //}
         }
     }
 }

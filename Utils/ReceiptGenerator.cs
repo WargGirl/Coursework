@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Coursework.Models;
 
-namespace Coursework
+namespace Coursework.Utils
 {
     public static class ReceiptGenerator
     {
@@ -33,7 +34,7 @@ namespace Coursework
             TimeSpan stayDuration = guest.CheckOutDate.Date - guest.CheckInDate.Date;
             int numberOfNights = (int)stayDuration.TotalDays;
             sb.AppendLine($"Number of Nights: {numberOfNights}");
-            sb.AppendLine($"Estimated Total: {room.Price * numberOfNights:C}"); 
+            sb.AppendLine($"Estimated Total: {room.Price * numberOfNights:C}");
             sb.AppendLine("-----------------------------");
             sb.AppendLine("\nThank you for choosing our hotel!");
 
